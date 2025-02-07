@@ -1,20 +1,16 @@
-const express = require('express');
+import express from 'express';
+import userController from '../src/controllers/user.js';
+
+
+
 
 const app = express();
 const PORT = 3000
 const runningMsg = `Servidor rodando na porta ${PORT}`
 
-app.get('/', (req, res) => {
-    console.log("logado!")
-    res.send(runningMsg);
-})
 
-app.post('/', (req, res) => {
-    res.send("app post");
-})
 
-app.delete('/', (req, res) => {
-    res.send("app delete");
-})
+app.use('/user', userController)
+
 
 app.listen(PORT, () => {console.log(runningMsg);})

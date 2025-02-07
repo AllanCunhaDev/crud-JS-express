@@ -1,12 +1,19 @@
 {
   "name": "express-JS",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --exec babel-node src/index.js"
   },
-  "license": "MIT",
+  "license": "ISC",
+  "keywords": [],
+  "author": "",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.20.3",
     "express": "4.18.1"
   },
   "devDependencies": {
